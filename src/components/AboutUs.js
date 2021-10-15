@@ -28,12 +28,12 @@ const AboutUs = () => {
         <WrapperWithMargin>
           <ContainerForImg>
             <Img>
-              <LazyLoadImage
-                alt="about us"
+              {/* <img
+                // alt="about us"
                 effect="blur"
                 src={AboutUsImg}
-                style={{ width: "100%", borderRadius: "8px" }}
-              />
+                style={{ width: "100%", height: "100%", borderRadius: "8px" }}
+              /> */}
             </Img>
           </ContainerForImg>
           <ContainerForText>
@@ -54,7 +54,7 @@ const AboutUs = () => {
             </Text2>
             <Icons>
               <a
-                href="https://www.facebook.com/bookinglane/photos/a.100117975015628/100147178346041/?type=3"
+                href="https://www.facebook.com/bookinglane"
                 style={{ textDecoration: "none" }}
               >
                 <ContainerForFacebook>
@@ -154,8 +154,8 @@ const WrapperWithMargin = styled.div`
 
 const ContainerForImg = styled.div``
 const Img = styled.div`
-  /* background: url(${AboutUsImg}) center no-repeat;
-  background-size: contain; */
+  background: url(${AboutUsImg}) center no-repeat;
+  background-size: contain;
   width: 800px;
   height: 540px;
   border-radius: 2.2%;

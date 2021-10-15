@@ -1,15 +1,15 @@
 import styled from "styled-components"
 // import { css } from "styled-components"
 import Carousel, { consts } from "react-elastic-carousel"
-import Ivan from "../assets/OurTeam/Ivan-min.avif"
-import Becca from "../assets/OurTeam/Becca-min.avif"
-import Evgeniy from "../assets/OurTeam/Evgeniy-min.avif"
-import Saltanat from "../assets/OurTeam/Saltanat-min.avif"
-import Emir from "../assets/OurTeam/Emir-min.avif"
-import Suleyman from "../assets/OurTeam/Suleyman-min.avif"
-import Almaz from "../assets/OurTeam/Almaz-min.avif"
-import Aytemir from "../assets/OurTeam/Aytemir-min.avif"
-import Azim from "../assets/OurTeam/Azim-min.avif"
+import Ivan from "../assets/OurTeam/Ivan-min.jpg"
+import Becca from "../assets/OurTeam/Becca-min.jpg"
+import Evgeniy from "../assets/OurTeam/Evgeniy-min.jpg"
+import Saltanat from "../assets/OurTeam/Saltanat-min.jpg"
+import Emir from "../assets/OurTeam/Emir-min.jpg"
+import Suleyman from "../assets/OurTeam/Suleyman-min.jpg"
+import Almaz from "../assets/OurTeam/Almaz-min.jpg"
+import Aytemir from "../assets/OurTeam/Aytemir-min.jpg"
+import Azim from "../assets/OurTeam/Azim-min.jpg"
 import { LeftArrowForCarousel, RightArrowForCarousel } from "../assets/icons"
 import { useState } from "react"
 import { useMediaQuery } from "@material-ui/core"
@@ -87,8 +87,8 @@ const OurTeam = () => {
               alt="Our Team"
               style={{ width: "82%", height: "100%", borderRadius: "8px" }}
             /> */}
-            <LazyLoadImage
-              effect="blur"
+            <img
+              // effect="blur"
               alt="Our Team"
               src={Evgeniy}
               style={{
@@ -102,8 +102,8 @@ const OurTeam = () => {
               alt="Our Team"
               style={{ width: "82%", height: "100%", borderRadius: "8px" }}
             /> */}
-            <LazyLoadImage
-              effect="blur"
+            <img
+              // effect="blur"
               alt="Our Team"
               src={Becca}
               style={{
@@ -117,8 +117,8 @@ const OurTeam = () => {
               alt="Our Team"
               style={{ width: "82%", height: "100%", borderRadius: "8px" }}
             /> */}
-            <LazyLoadImage
-              effect="blur"
+            <img
+              // effect="blur"
               alt="Our Team"
               src={Ivan}
               style={{
@@ -132,8 +132,8 @@ const OurTeam = () => {
               alt="Our Team"
               style={{ width: "80%", height: "100%", borderRadius: "8px" }}
             /> */}
-            <LazyLoadImage
-              effect="blur"
+            <img
+              // effect="blur"
               alt="Our Team"
               src={Almaz}
               style={{
@@ -147,8 +147,8 @@ const OurTeam = () => {
               alt="Our Team"
               style={{ width: "80%", height: "100%", borderRadius: "8px" }}
             /> */}
-            <LazyLoadImage
-              effect="blur"
+            <img
+              // effect="blur"
               alt="Our Team"
               src={Emir}
               style={{
@@ -162,8 +162,8 @@ const OurTeam = () => {
               alt="Our Team"
               style={{ width: "80%", height: "100%", borderRadius: "8px" }}
             /> */}
-            <LazyLoadImage
-              effect="blur"
+            <img
+              // effect="blur"
               alt="Our Team"
               src={Azim}
               style={{
@@ -177,8 +177,8 @@ const OurTeam = () => {
               alt="Our Team"
               style={{ width: "82.7%", height: "100%", borderRadius: "8px" }}
             /> */}
-            <LazyLoadImage
-              effect="blur"
+            <img
+              // effect="blur"
               alt="Our Team"
               src={Saltanat}
               style={{
@@ -192,8 +192,8 @@ const OurTeam = () => {
               alt="Our Team"
               style={{ width: "80.7%", height: "100%", borderRadius: "8px" }}
             /> */}
-            <LazyLoadImage
-              effect="blur"
+            <img
+              // effect="blur"
               alt="Our Team"
               src={Suleyman}
               style={{
@@ -207,8 +207,8 @@ const OurTeam = () => {
               alt="Our Team"
               style={{ width: "80.7%", height: "100%", borderRadius: "8px" }}
             /> */}
-            <LazyLoadImage
-              effect="blur"
+            <img
+              // effect="blur"
               alt="Our Team"
               src={Aytemir}
               style={{
@@ -225,8 +225,8 @@ const OurTeam = () => {
                 while (index <= 4) {
                   return (
                     <ImgDiv>
-                      <LazyLoadImage
-                        effect="blur"
+                      <img
+                        // effect="blur"
                         alt="Our Team"
                         src={image}
                         style={{
@@ -254,8 +254,8 @@ const OurTeam = () => {
                 while (index > 4) {
                   return (
                     <ImgDiv>
-                      <LazyLoadImage
-                        effect="blur"
+                      <img
+                        // effect="blur"
                         alt="Our Team"
                         src={image}
                         style={{

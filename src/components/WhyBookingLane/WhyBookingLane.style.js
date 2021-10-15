@@ -56,8 +56,14 @@ export const Text = styled.p`
     line-height: 26px;
   }
 `
-export const ImageBlock = styled.div``
+export const ImageBlock = styled.div`
+  width: 100%;
+  height: 100%;
+`
 export const Img = styled.img`
+  /* width: 300%; */
+  min-width: 100%;
+  min-height: 100%;
   @media (max-width: 1339px) {
     width: 100%;
   }

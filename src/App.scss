@@ -1,0 +1,36 @@
+.fallback-preloader-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fallback-preloader {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  //   bottom: 40%;
+  //   right: 46%;
+
+  //   transition: 10ms;
+  animation-name: pulse-preloader;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  opacity: 0.4;
+}
+@keyframes pulse-preloader {
+  0% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+// transition: "0ms",
+//       animationName: "$pulse",
+//       animationIterationCount: "infinite",
+//       animationDuration: "2s",

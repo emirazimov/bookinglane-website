@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { css } from "styled-components"
 import { HeaderBookingIcon, HeaderBookingIconForMobile } from "../assets/images"
 import Bg from "../assets/Bg.svg"
-import BgMobilePhoneHeader from "../assets/BgMobilePhone-min.webp"
+import BgMobilePhoneHeader from "../assets/BgMobilePhone-min.png"
 import {
   AppstoreIcon,
   AppstoreIconForMobile,
@@ -421,7 +421,7 @@ const HeaderWithBackground = styled.header`
 
   /* width: 100px;
   height: 100px; */
-  margin-top: -90px;
+  margin-top: -117px;
   @media (max-width: 620px) {
     padding-top: 16px;
   }
@@ -436,7 +436,7 @@ const HeaderContainer = styled.div`
   background: url(${BgMobilePhoneHeader}) bottom right no-repeat;
   background-size: 42%;
   background-position-x: 100%;
-  background-position-y: 67%;
+  background-position-y: 80%;
   @media (max-width: 1720px) {
     background-size: 38%;
   }

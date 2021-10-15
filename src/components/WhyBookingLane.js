@@ -2,7 +2,7 @@ import styled from "styled-components"
 // import { css } from "styled-components"
 
 // import InstagramEmbed from "react-instagram-embed"
-import whyBookinglane from "../assets/WhyBookinglane-min.png"
+import whyBookinglane from "../assets/WhyBookinglane-min.avif"
 import React, { forwardRef, useState } from "react"
 import { useSpring, animated, config } from "react-spring"
 import { InView } from "react-intersection-observer"

@@ -2,8 +2,10 @@
 // import { useDispatch, useSelector } from "react-redux"
 // import { Header } from "./components"
 
-import { Helmet } from "react-helmet"
+// import { Helmet } from "react-helmet"
 import { lazy, Suspense } from "react"
+import { BookinglaneIconForRenderingPreloader } from "./assets/icons"
+import "./App.scss"
 
 const Header = lazy(() => import("./components/Header"))
 
@@ -30,9 +32,18 @@ function App() {
 
       <Suspense
         fallback={
-          <div style={{ color: "black", fontSize: "20px" }}>Loading....</div>
+          <div className="fallback-preloader-container">
+            <div className="fallback-preloader">
+              <BookinglaneIconForRenderingPreloader />
+            </div>
+          </div>
         }
       >
+        {/* <div className="fallback-preloader-container">
+          <div className="fallback-preloader">
+            <BookinglaneIconForRenderingPreloader />
+          </div>
+        </div> */}
         <Header />
       </Suspense>
     </div>

@@ -311,9 +311,10 @@ const RequestDemo = ({ opened }) => {
     lastName,
     email,
     startDateTime,
-    endDateTime
+    endDateTime,
+    countryId
   ) => {
-    if (clientChoiceStart && selectedDateForSubmit && hasError) {
+    if (clientChoiceStart && selectedDateForSubmit && !hasError) {
       const requestOptions = {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -326,7 +327,7 @@ const RequestDemo = ({ opened }) => {
           endDateTime: `${endDateTime}`,
           timeZoneId: `${usersTimezone}`,
           offset: `${clientTimezoneOffset}`,
-          countryId: `${country}`,
+          countryId: `${countryId}`,
         }),
       }
       setTransparentBg(true)
@@ -350,7 +351,7 @@ const RequestDemo = ({ opened }) => {
       } else {
         setRedErrorCalendar(false)
       }
-      if (!hasError) {
+      if (hasError) {
         setHasError(true)
       } else {
         setHasError(false)
@@ -554,7 +555,11 @@ const RequestDemo = ({ opened }) => {
             // }
             disabling(disable)
             console.log(times2, disable)
-            setDisableToday(false)
+            if (event == FormatUsaTime) {
+              setDisableToday(true)
+            } else {
+              setDisableToday(false)
+            }
             // events = []
           }
           // function (reason) {
@@ -579,6 +584,7 @@ const RequestDemo = ({ opened }) => {
       setEmailError("")
     }
   }
+
   var usaTime = new Date().toLocaleString("en-US", {
     timeZone: "America/Los_Angeles",
   })
@@ -603,9 +609,9 @@ const RequestDemo = ({ opened }) => {
   // let countries = funcName()
   const [hasError, setHasError] = useState(null)
   useEffect(() => {
-    // if (requestDemo) {
-    //   calendarClickHandler(FormatUsaTime)
-    // }
+    if (requestDemo) {
+      calendarClickHandler(FormatUsaTime)
+    }
     // calendarClickHandler(FormatUsaTime)
     // setCountries()
     // getCountriesFromBack()
@@ -647,7 +653,8 @@ const RequestDemo = ({ opened }) => {
                   lastName,
                   email,
                   selectedDateForSubmit + "T" + clientChoiceStart,
-                  selectedDateForSubmit + "T" + clientChoiceEnd
+                  selectedDateForSubmit + "T" + clientChoiceEnd,
+                  country
                 )
                 event.preventDefault()
               }}
@@ -662,18 +669,7 @@ const RequestDemo = ({ opened }) => {
                         minDate={FormatUsaTime}
                         tileDisabled={({ date }) => {
                           // console.log(date.getDate())
-                          return (
-                            date.getDay() === 0 ||
-                            date.getDay() === 6 ||
-                            date.getDate() === 21 ||
-                            date.getDate() === 22 ||
-                            date.getDate() === 23 ||
-                            date.getDate() === 24 ||
-                            date.getDate() === 25 ||
-                            date.getDate() === 26 ||
-                            date.getDate() === 27 ||
-                            date.getDate() === 28
-                          )
+                          return date.getDay() === 0 || date.getDay() === 6
                         }}
                         calendarType={"US"}
                         // disablePast
